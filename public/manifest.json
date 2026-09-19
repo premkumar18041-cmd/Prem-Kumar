@@ -1,0 +1,47 @@
+{
+  "id": "/",
+  "name": "Accessories.lt – IVER Accessories Store",
+  "short_name": "Accessories",
+  "description": "Native PWA shopping app for Accessories.lt. Discover curated jewelry, structured bags, and fashion accessories.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#FAF9F6",
+  "theme_color": "#18181B",
+  "categories": ["shopping", "lifestyle"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Shop Jewelry",
+      "short_name": "Jewelry",
+      "url": "/#/shop/jewelry",
+      "icons": [{ "src": "/favicon.svg", "sizes": "96x96" }]
+    },
+    {
+      "name": "Bags & Totes",
+      "short_name": "Bags",
+      "url": "/#/shop/bags",
+      "icons": [{ "src": "/favicon.svg", "sizes": "96x96" }]
+    },
+    {
+      "name": "Track Order",
+      "short_name": "Tracking",
+      "url": "/#/tracking",
+      "icons": [{ "src": "/favicon.svg", "sizes": "96x96" }]
+    }
+  ]
+}

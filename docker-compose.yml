@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - DATABASE_URL=postgres://accessories_user:SecurePass2026@postgres:5432/accessories_db
+      - REDIS_URL=redis://redis:6379
+      - JWT_SECRET=production_jwt_secret_accessories_lt_2026
+    depends_on:
+      - postgres
+      - redis
+    restart: always
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: accessories_user
+      POSTGRES_PASSWORD: SecurePass2026
+      POSTGRES_DB: accessories_db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./migrations/001_init.sql:/docker-entrypoint-initdb.d/001_init.sql
+    ports:
+      - "5432:5432"
+    restart: always
+
+  redis:
+    image: redis:7-alpine
+    command: redis-server --appendonly yes
+    volumes:
+      - redisdata:/data
+    ports:
+      - "6379:6379"
+    restart: always
+
+volumes:
+  pgdata:
+  redisdata:

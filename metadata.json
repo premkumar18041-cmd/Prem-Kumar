@@ -1,0 +1,6 @@
+{
+  "name": "IVER Accessories",
+  "description": "PWA Web App and full-stack e-commerce system for Accessories.lt featuring native mobile app UI, complete customer shopping journey, PostgreSQL schema, Redis caching, payment gateway, background queue, and admin dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
